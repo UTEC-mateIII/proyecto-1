@@ -1,8 +1,8 @@
 # Proyecto 1
+
 [![made-with-latex](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg)](https://www.latex-project.org/)
 
-A LaTeX template to take notes.
-One file per class.
+Proyecto sobre algo con grafos.
 
 ## Dependencies
 
@@ -18,7 +18,7 @@ One file per class.
 ### Linux
 
 ```sh
-$ git clone https://github.com/UTEC-mateIII/proyecto-1
-$ cd proyecto-1
-$ make
+git clone https://github.com/UTEC-mateIII/proyecto-1
+cd proyecto-1
+make
 ```
