@@ -10,7 +10,7 @@ script:
     - ./uncache.sh
     # Docker image on https://hub.docker.com/r/otreblan/arutex
     # The texhash rebuilds the /etc/texmf/ls-R
-    - docker run  -v $(pwd):/home/docker/input otreblan/arutex -c "sudo texhash && sudo make"
+    - docker run  -v $(pwd):/home/docker/input otreblan/arutex -c "sudo make"
     - ./cache.sh
 deploy:
     provider: releases
