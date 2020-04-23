@@ -3,11 +3,11 @@
 \makeatother
 \documentclass[../main.tex]{subfiles}
 
-\graphicspath{{ima/clase${CURRDAY}}{../ima/clase${CURRDAY}}}
+\graphicspath{{ima/@NAME@}{../ima/@NAME@}}
 
 % Aquí empieza el documento{{{
 \begin{document}
-\chapter{<++>}%
+\section{<++>}%
 
 \thispagestyle{fancy}
 

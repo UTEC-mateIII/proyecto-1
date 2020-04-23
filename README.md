@@ -18,15 +18,7 @@ One file per class.
 ### Linux
 
 ```sh
-$ git clone https://github.com/otreblan/1def
-$ cd 1def
+$ git clone https://github.com/UTEC-mateIII/proyecto-1
+$ cd proyecto-1
 $ make
 ```
-
-### Windows
-
-Install Linux
-
-### MacOS
-
-Install Linux

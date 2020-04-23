@@ -18,9 +18,16 @@
 
 \doublespacing
 
-% Btw I use arch
-\setmonofont{InconsolataGo Nerd Font}
+% Set font if found
+\IfFontExistsTF{InconsolataGo Nerd Font}
+{
+	\setmonofont{InconsolataGo Nerd Font}
+}
+{
+	% Nada
+}
 
+% Btw I use arch
 \newcommand{\btw}{{\color{arch}\texttt{}} }
 \newcommand{\git}{{\color{git}\texttt{}} }
 
