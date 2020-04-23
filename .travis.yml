@@ -9,12 +9,7 @@ cache:
 script:
     - ./uncache.sh
     # Docker image on https://hub.docker.com/r/otreblan/arutex
-    - docker run  -v $(pwd):/home/docker/input otreblan/arutex -c "cd /tmp;
-          git clone --depth=1 /home/docker/input;
-          make;
-          sudo cp -rf . /home/docker/input
-          "
-
+    - docker run  -v $(pwd):/home/docker/input otreblan/arutex -c "sudo make"
     - ./cache.sh
 deploy:
     provider: releases
