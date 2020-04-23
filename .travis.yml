@@ -9,10 +9,8 @@ cache:
 script:
     - ./uncache.sh
     # Docker image on https://hub.docker.com/r/otreblan/arutex
-    - docker run  -v $(pwd):/home/docker/input otreblan/arutex -c
-          "
-          cp -rf . ../tmp;
-          cd ../tmp;
+    - docker run  -v $(pwd):/home/docker/input otreblan/arutex -c "cd /tmp;
+          git clone --depth=1 /home/docker/input;
           make;
           sudo cp -rf . /home/docker/input
           "
@@ -23,7 +21,7 @@ deploy:
 # https://github.com/japaric/trust/issues/104
     api_key:
         secure: "Y0XQkLbbASflDGwu8DB3efCJ08nMCjT0E8rBV77WSEhfq1SdhRRXX4Fkr5HL5LA4wYq0PRuoHUM5I3RHnqefXyiZolX/C7d2FsX/LiyM4f9JbdldwbhPCyDmf+Cm+uTqNjMvhFwv0FKVVHH1JkUTzchtUTDTKvLx3hJ8v9/Z0QqQsp8IBzHwHxxLiAZdPG5IGHE7fe9RJVtPvKuWXZLJy6hEn77C1WEeUGpKgPiMQmO6a39QUJ3iCQwBSKO//tEKd618m3BMeWbOP9+feFNFJwxiRWLIVIuyN893olbZP+X4iCbWuYiNNt+8qr486hcC7eqB7dvEzD+TA9V/atFRXeiIt0aEbqgxvTk28EbcrzJ1d0WXRx6BfCYJnOSqinnHiPWjaCl35sCKO11/aVhMsm7Qw0e9cyOddvs963BoYKV4D7AL4dXcfNmKaVo3CegvddPkEN2hcY4l7KwfxUSMv6xAbIAOTpwRcHNSAIvB/cL/OvPtsQhrPW2aer8r92WbNlGJcBqD8In/1twFFxiNmW1tgTaGTNRT3DD7sBVnXHgRm/mnJuEKHjJxT7wHCFi5LxnmMbVhncwIRMEKv+e6dK8+m1Ehz5oBcCh9S7NBbXb6XO0w+jInO4vlsMhWB0GuxMKU0De9ZHDxdkImWv/QSaql1HjYNO7A0Cu1c0aI70M="
-    file_glob: "true"
+    file_glob: true
     file: "*.pdf"
     skip_cleanup: true
     on:
